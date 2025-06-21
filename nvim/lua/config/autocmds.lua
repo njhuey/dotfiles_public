@@ -3,7 +3,7 @@
 -- Add any additional autocmds here
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "python", "c", "bazel", "bzl" },
+  pattern = { "python", "c" },
   callback = function()
     vim.bo.expandtab = true
     vim.bo.shiftwidth = 4
