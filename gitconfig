@@ -1,0 +1,19 @@
+[user]
+	name = 
+	email = 
+[core]
+	editor = nvim
+[init]
+	DefaultBranch = main
+[branch]
+    rebase = true
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    wt = worktree
+    wtl = worktree list
+    wtb = "!f() { git branch -f $1 $2; git worktree add $1 $1; }; f"
+    wtbm = "!f() { git branch -f $1 origin/$(git remote show origin | awk '/HEAD branch/ {print $NF}'); git worktree add $1 $1; }; f"
+    wtr = "!f() { git worktree remove -f $1; git branch -D $1; }; f"
+    pu = !"git push -u origin $(git rev-parse --abbrev-ref HEAD)"
+[pull]
+    rebase = true

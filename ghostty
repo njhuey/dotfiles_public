@@ -1,4 +1,4 @@
-theme = catppuccin-frappe
+theme = Catppuccin Frappe
 
 title = 👻
 macos-titlebar-proxy-icon = hidden
@@ -13,5 +13,8 @@ cursor-opacity = .75
 mouse-hide-while-typing
 cursor-click-to-move
 
+# I really just want windowed full-screen so set nonsensically large values
+# for window height and width.
 window-height = 240
 window-width = 300
+keybind = shift+enter=text:\n
