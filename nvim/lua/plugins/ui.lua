@@ -71,6 +71,7 @@ require("tabby").setup({
 
 map("n", "<S-h>", "<cmd>tabprevious<cr>", { desc = "Prev Tab" })
 map("n", "<S-l>", "<cmd>tabnext<cr>", { desc = "Next Tab" })
+map("n", "<leader>tn", "<cmd>tabnew<cr>", { desc = "New Tab" })
 map("n", "<leader>bj", function()
   vim.ui.select(vim.api.nvim_list_tabpages(), {
     prompt = "Pick Tab:",
