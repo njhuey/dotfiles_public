@@ -38,8 +38,11 @@ map("n", "<leader>K", "<cmd>norm! K<cr>", { desc = "Keywordprg" })
 map("x", "<", "<gv")
 map("x", ">", ">gv")
 
--- open lazy menu
-map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Open lazy menu" })
+-- update plugins via vim.pack, then show the lockfile diff for review
+map("n", "<leader>l", function()
+  vim.pack.update()
+  vim.cmd("!cd " .. vim.fn.stdpath("config") .. " && git diff -- nvim-pack-lock.json")
+end, { desc = "Update Plugins" })
 
 -- new file
 map("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
